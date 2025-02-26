@@ -1,0 +1,81 @@
+body.dark{
+    background-color: #222222; /* Color del fondo */
+    color: #eeeeee; /* Color del texto */
+}
+
+/* CABECERA */
+
+div.title-block{
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #333;
+}
+
+#title{
+    font-size: 300%;
+    text-decoration: none;
+    color: #bbb;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+#subtitle{
+    font-size: 120%;
+    font-style: italic;
+    color: #bbb;
+    font-family: monospace;
+}
+
+div.navigation> a{
+    color: white;
+    font-size: 120%;
+    background-color: #555;
+    font-family: monospace;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+div.photo-block{
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+
+h2.photo-title{
+    font-size: 140%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+h3.photo_score{
+    font-family: monospace;
+    font-size: 130%;
+}
+
+img.photo-image{
+    width: 100%;
+    height: auto;
+}
+
+input, select{
+    background-color: #666;
+    border-color: #999;
+    color: white;
+}
+
+.input-group> label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.input-group{
+    margin-bottom: 0.5em;
+}
