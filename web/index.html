@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Índice</title>
+    <title>Galería</title>
+
     <link rel="icon" href="\images\favicon.ico">
     <link rel="stylesheet" href="\css\style.css">
     <script src="\js\utils\include.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="\css\bootstrap.min.css">
+    <link rel="stylesheet" href="\css\font-awesome.min.css">
+    <script src="\js\libs\bootstrap.min.css"></script>
 </head>
 <body class="dark">
     <div id="page-header"></div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md">
+                Fila 1 Columna 1
+            </div>
+
+            <div class="col-md">
+                Fila 1 Columna 2
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md">
+                Fila 2 Columna 1
+            </div>
+
+            <div class="col-md">
+                Fila 2 Columna 2
+            </div>
+
+            <div class="col-md">
+                Fila 2 Columna 3
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-9">
+                Columna ancha (75%)
+            </div>
+
+            <div class="col-md">
+                Esta columna ocupa el espacio restante
+            </div>
+        </div>
+    </div>
 
     <h2>Fotos recientes</h2>
     <a href="cargar_foto.html">Carga una nueva foto</a>
@@ -72,6 +113,12 @@
             <div class="photo-edit-block">
                 <button>Editar foto</button>
                 <button>Borrar foto</button>
+            </div>
+
+            <div>
+                Esta foto tiene las siguientes categorias:
+                <span class="badge bg-primary">Paisaje</span>
+                <span class="badge bg-primary">Naturaleza</span>
             </div>
         </div>
     </div>
