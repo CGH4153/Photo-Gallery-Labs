@@ -3,19 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cabecera</title>
+
     <link rel="stylesheet" href="\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="\css\bootstrap.min.css">
+    <link rel="stylesheet" href="\css\font-awesome.min.css">
+    <script src="\js\libs\bootstrap.min.css"></script>
 </head>
 <body>
     <div class="title-block">
         <h1 id="title">Galería de fotos</h1>
         <h3 id="subtitle">IISSI-2 - Universidad de Sevilla</h3>
 
-        <div class="navigation">
-            <a href="index.html">Fotos recientes</a>
-            <a href="register.html">Registrarte</a>
-            <a href="login.html">Iniciar sesión</a>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Índice de navegación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Fotos recientes</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Registrarse</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Iniciar sesión</a>
+                        </li>
+    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fotos en tendencia</a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item text-light" href="trending_users.html">Usuarios en tendencia</a>
+                                </li>
+    
+                                <li>
+                                    <a class="dropdown-item text-light" href="trending_photos.html">Fotos en tendencia</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <hr>
