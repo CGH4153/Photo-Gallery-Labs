@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+
+    <link rel="icon" href="\images\favicon.ico">
+    <link rel="stylesheet" href="\css\style.css">
+    <script src="\js\utils\include.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="\css\bootstrap.min.css">
+    <link rel="stylesheet" href="\css\font-awesome.min.css">
+    <script src="\js\libs\bootstrap.min.css"></script>
+</head>
+<body>
+    <div id="page-header"></div>
+
+    <form>
+        <div class="form-group">
+            <label for="username-input">Nombre de usuario:</label>
+            <input type="text" class="form-control" id="username-input" name="username" placeholder="Nombre de usuario">
+        </div>
+        
+        <div class="form-group">
+            <label for="password-input">Contraseña:</label>
+            <input type="password" class="form-control" id="password-input" name="password" placeholder="Contraseña">
+        </div>
+
+        <div class="form-group">
+            <label for="select-input">Selecciona un elemento de la lista:</label>
+            <select class="form-control" id="select-input" name="select">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+            </select>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkbox-id" name="checkbox">
+            <label class="form-check-label" for="checkbox-id">Opción con casilla</label>
+        </div>
+
+        <div class="form-check-inline">
+            <input class="form-check-input" type="radio" id="radio-button" value="1" checked>
+            <label class="form-check-label">Opción 1</label>
+        </div>
+
+        <div class="form-check-inline">
+            <input class="form-check-input" type="radio" id="radio-button" value="2">
+            <label class="form-check-label">Opción 2</label>
+        </div>
+
+        <div class="form-button">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-primary">Activado</button>
+            <button type="button" class="btn btn-primary" disabled>Desactivado</button>
+        </div>
+        
+        <div class="form-list-group">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary">Elemento 1</li>
+                <li class="list-group-item list-group-item-success">Elemento 2</li>
+                <li class="list-group-item list-group-item-warning">Elemento 3</li>
+                <li class="list-group-item list-group-item-danger">Elemento 4</li>
+            </ul>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+</html>
