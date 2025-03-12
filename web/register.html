@@ -1,29 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="\css\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="\css\bootstrap.min.css">
+    <link rel="stylesheet" href="\css\font-awesome.min.css">
+    <script src="\js\libs\bootstrap.min.css"></script>
 </head>
-<body>
-    <a href="index.html">Return to the main page</a>
+<body class="dark">
+    <div id="page-header"></div>
+
+    <h1 class="text-center">Registrar un nuevo usuario</h1>
+
+    <hr>
 
     <form>
-        <p>
-            First name: <input type="text" name="firstName">
-        </p>
-        <p>
-            Last name: <input type="text" name="lastName">
-        </p>
-        <p>
-            Email: <input type="email" name="email">
-        </p>
-        <p>
-            Password: <input type="password" name="password">
-        </p>
-        <p>
-            Send: <input type="submit">
-        </p>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="firstname-input">Primer nombre:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="firstname-input" name="firstName" placeholder="Primer nombre" required>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="lastname-input">Apellidos:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="lastname-input" name="lastName" placeholder="Apellidos" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="email-input">Email:</label>
+                    <input type="email" class="form-control text-light bg-dark" id="email-input" name="email" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="phonenumber-input">Teléfono:</label>
+                    <input type="tel" class="form-control text-light bg-dark" id="phonenumber-input" name="phoneNumber" placeholder="Teléfono" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="username-input">Nombre de usuario:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="username-input" name="username" placeholder="Nombre de usuario" required>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="lastname-input">Contraseña:</label>
+                    <input type="password" class="form-control text-light bg-dark" id="password-input" name="password" placeholder="Contraseña" required>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-group">
+                    <label for="lastname-input">Repita la cotraseña:</label>
+                    <input type="password" class="form-control text-light bg-dark" id="password-input" name="repassword" placeholder="Repita la contraseña" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md text-center">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+        </div>
     </form>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
 </body>
 </html>
