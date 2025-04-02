@@ -180,7 +180,7 @@ async function loadAllPhotos() {
     } 
     
     catch (err) {
-        messageRenderer.showErrorMessage("Error while loading photos", err);
+        messageRenderer.showErrorMessage("Error al cargar las fotos", err);
     }
 }
 
@@ -192,6 +192,10 @@ async function loadAllPhotos() {
     let galleryContainer = document.querySelector("div.container");
     try {
         let photos = await photoswithusersAPI_auto.getAll();
+    }
+
+    catch (err) {
+        messageRenderer.showErrorMessage("Error al cargar las fotos", err);
     }
 }
 
