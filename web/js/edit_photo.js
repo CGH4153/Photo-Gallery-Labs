@@ -43,17 +43,33 @@ async function handleSubmitPhoto(event) {
     let form = event.target;
     let formData = new FormData(form);
 
-    // Add the current user ID
-
-    formData.append("userId", 1);
-    try {
-        let resp = await photosAPI_auto.create(formData);
-        let newId = resp.lastId;
-        window.location.href = `photo_detail.html?photoId=${newId}`;
+    if (currentPhoto === null) { // Creating a new photo
+        // Add the current user ID
+        formData.append("userId", 1);
+        
+        try {
+            let resp = await photosAPI_auto.create(formData);
+            let newId = resp.lastId;
+            window.location.href = `photo_detail.html?photoId=${newId}`;
+        } 
+        
+        catch (err) {
+            messageRenderer.showErrorAsAlert(err.response.data.message);
+        }
     } 
     
-    catch (err) {
-        messageRenderer.showErrorMessage(err.response.data.message);
+    else { // Updating an existing photo
+        formData.append("userId", currentPhoto.userId);
+        formData.append("date", currentPhoto.date);
+
+        try {
+            await photosAPI_auto.update(formData, photoId);
+            window.location.href = `photo_detail.html?photoId=${photoId}`;
+        } 
+        
+        catch (err) {
+            messageRenderer.showErrorAsAlert(err.response.data.message);
+        }
     }
 }
 
