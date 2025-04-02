@@ -84,3 +84,9 @@ input, select{
 .input-group{
     margin-bottom: 0.5em;
 }
+
+img.photo-user-avatar {
+    max-width: 25px;
+    height: auto;
+    border-radius: 50%;
+}

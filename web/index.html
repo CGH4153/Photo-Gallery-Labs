@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="\css\font-awesome.min.css">
     <script src="\js\libs\bootstrap.min.css"></script>
     <script src="\js\index.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
 </head>
 <body class="dark">
     <div id="page-header"></div>
@@ -173,6 +175,10 @@
         </div>
     </form>
 
+    <button class="btn btn-primary" id="test-button">Press me!</button>
+
+    <div id="errors"></div>
+    
     <script>
         include("header.html", "#page-header");
     </script>
