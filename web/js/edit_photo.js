@@ -2,6 +2,7 @@
 
 import { photosAPI } from "/js/api/photos.js";
 import { messageRenderer } from "/js/renderers/messages.js";
+import { sessionManager } from "./utils/session";
 
 let urlParams = new URLSearchParams(window.location.search);
 let photoId = urlParams.get("photoId");
@@ -13,7 +14,9 @@ async function main() {
 
     if (photoId !== null) {
         loadCurrentPhoto();
-        }
+    }
+
+    hideActionsColumn();
 }
 
 async function loadCurrentPhoto() {
@@ -45,7 +48,7 @@ async function handleSubmitPhoto(event) {
 
     if (currentPhoto === null) { // Creating a new photo
         // Add the current user ID
-        formData.append("userId", 1);
+        formData.append("userId", sessionManager.getLoggedId());
         
         try {
             let resp = await photosAPI_auto.create(formData);
@@ -70,6 +73,14 @@ async function handleSubmitPhoto(event) {
         catch (err) {
             messageRenderer.showErrorAsAlert(err.response.data.message);
         }
+    }
+}
+
+function hideActionsColumn(){
+    let actions_col = document.getElementById("actions-col");
+
+    if(!sessionManager.isLogged()){
+        actions_col.style.display = "none";
     }
 }
 

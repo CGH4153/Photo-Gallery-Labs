@@ -190,6 +190,7 @@ import { photoswithusersAPI_auto } from "/js/api/_photoswithusers.js";
 
 async function loadAllPhotos() {
     let galleryContainer = document.querySelector("div.container");
+    
     try {
         let photos = await photoswithusersAPI_auto.getAll();
     }
